@@ -1,0 +1,112 @@
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  font-family: "Open Sans", sans-serif;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input {
+  width: 400px;
+  padding: 3px;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #240093;
+  border: none;
+  color: #FFFFFF;
+  font-size: 13px;
+  padding: 5px;
+  cursor:pointer;
+}
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #AAA;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 24px;
+}
+
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+table#bets {
+  font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#bets th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    background-color: #7e1cff;
+    color: white;
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#bets td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.created {
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 3px;
+}
+
+.locked {
+  background-color: orange;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 3px;
+}
+
+.completed {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 3px;
+}
+
+.expired {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 3px;
+}

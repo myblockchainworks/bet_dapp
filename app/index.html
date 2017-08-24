@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minimum Viable Product - Better App</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <h1>Minimum Viable Product - Better App</h1>
+  <div style="float:right;">
+    <br>
+    <div>  <button onclick="findWinners();hideBetScreen();" style="background-color: #65c200">RESULTS</button>  User Address : <input type="text" id="userAddressInput" placeholder="e.g., 0xc9af8f37c08aecb1489a3c771b1d86ddd48994b4" value='0xc9af8f37c08aecb1489a3c771b1d86ddd48994b4'></input> <button onclick="listBets();hideBetScreen();">Load</button>  <button onclick="showBetScreen()"> + New Bet</button></div>
+    <br>
+  </div>
+  <table id="bets">
+      <tr>
+          <th>#</th>
+          <th>Better</th>
+          <th>Name of Asset</th>
+          <th>Amount of Bet</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Againster</th>
+          <th>Name of Asset</th>
+          <th>Status</th>
+          <th>Action</th>
+      </tr>
+  </table>
+  <br>
+  <span>Total Bets : </span> <span id="betCount"></span>
+  <br><br>
+  <div id="newBetDiv" style="display:none;margin-left:25%;margin-right:25%;">
+    <h2>Start new Bet</h2>
+    <br><label style="width: 150px;" for="nameOfAsset">Name of Asset:</label><input type="text" id="nameOfAsset" placeholder="e.g., Apple"></input>
+    <br><label style="width: 150px;" for="amountOfBet">Amount of Bet:</label><input type="number" id="amountOfBet" placeholder="e.g., 10"></input>
+    <br><label style="width: 150px;" for="startTime">Start Time:</label><input type="datetime-local" id="startTime"></input>
+    <br><label style="width: 150px;" for="endTime">End Time:</label><input type="datetime-local" id="endTime"></input>
+    <br><br><label style="width: 150px;" for="endTime">&nbsp;</label><button id="start" onclick="startNewBet()">Start Bet</button> <button id="reset" onclick="resetBet()">Reset</button> <button id="hideBetScreen" onclick="hideBetScreen()">Close</button>
+  </div>
+  <div id="betAgainstDiv" style="display:none;margin-left:25%;margin-right:25%;">
+    <h2>Bet Against</h2>
+    <br><label style="width: 150px;" for="selectedBetter">Better: </label> <span id="selectedBetter"></span> <input type="hidden" id="selectedBetIndex"/>
+    <br><label style="width: 150px;" for="selectedAssert">Better's Asset: </label> <span id="selectedAssert"></span>
+    <br><label style="width: 150px;" for="againsterNameOfAsset">Your Asset:</label><input type="text" id="againsterNameOfAsset" placeholder="e.g., Apple"></input>
+    <br><br><label style="width: 150px;" for="againsterNameOfAsset">&nbsp;</label><button id="start" onclick="betAgainstAction()">Bet</button> <button id="reset" onclick="resetBetAgainst()">Reset</button> <button id="hideBetAgainstScreen" onclick="hideBetAgainstScreen()">Close</button>
+  </div>
+  <br><br>
+  <span id="status"></span>
+</body>
+</html>
